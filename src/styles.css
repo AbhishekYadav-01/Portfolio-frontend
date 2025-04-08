@@ -115,7 +115,7 @@ p {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif; /* Corrected font name */
-  background-image: url('src\assets\background6.webp');
+  background-image: url('https://github.com/AbhishekYadav-01/Portfolio-frontend/blob/main/src/assets/background6.webp');
   background-size: cover;
   /* background-position: center; */
   background-attachment: fixed;

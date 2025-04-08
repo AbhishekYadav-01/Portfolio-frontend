@@ -115,7 +115,7 @@ p {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif; /* Corrected font name */
-  background-image: url('C:\Users\iitea\Desktop\Portfolio - Copy\portfolio_frontend\src\assets\background6.webp');
+  background-image: url('src\assets\background6.webp');
   background-size: cover;
   /* background-position: center; */
   background-attachment: fixed;

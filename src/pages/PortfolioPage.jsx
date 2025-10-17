@@ -129,6 +129,7 @@ const PortfolioPage = ({ section }) => {
       >
         <Link 
           to="/" 
+          data-icon="🏠"
           style={{ 
             color: 'white', 
             padding: '5px 8px', // updated padding
@@ -142,6 +143,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/about-me" 
+          data-icon="👤"
           style={{ 
             color: 'white', 
             padding: '5px 8px', // updated padding
@@ -155,6 +157,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/projects" 
+          data-icon="💻"
           style={{ 
             color: 'white', 
             padding: '5px 8px',
@@ -168,6 +171,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/skills" 
+          data-icon="🧠"
           style={{ 
             color: 'white', 
             padding: '5px 8px',
@@ -181,6 +185,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/experience" 
+          data-icon="💼"
           style={{ 
             color: 'white', 
             padding: '5px 8px',
@@ -194,6 +199,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/education" 
+          data-icon="🎓"
           style={{ 
             color: 'white', 
             padding: '5px 8px',
@@ -207,6 +213,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/achievements" 
+          data-icon="🏆"
           style={{ 
             color: 'white', 
             padding: '5px 8px',
@@ -220,6 +227,7 @@ const PortfolioPage = ({ section }) => {
         </Link>
         <Link 
           to="/contact" 
+          data-icon="📞"
           style={{ 
             color: 'white', 
             padding: '5px 8px',

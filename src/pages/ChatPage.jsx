@@ -40,7 +40,7 @@ const ChatPage = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/chat/', { 
+      const response = await axios.post('https://portfolio-backend-v2-3kgf.onrender.com/api/chat/', { 
         question: questionToSubmit 
       });
       setAnswer(response.data.answer);

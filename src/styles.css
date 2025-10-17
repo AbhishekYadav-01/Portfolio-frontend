@@ -1728,14 +1728,120 @@ html {
   font-weight: 500;
 }
 
-/* Ensure About Me text is selectable and not affected by hover blur */
 .about-container, 
 .bio-text {
-  user-select: text !important; /* Allow text selection */
-  pointer-events: auto !important; /* Enable pointer events on text */
+  user-select: text !important;
+  pointer-events: auto !important;
 }
 
-/* If any hover state applies a blur on the description, neutralize it */
 .about-container:hover .bio-text {
   backdrop-filter: none;
+}
+
+.nav-ellipse {
+  box-sizing: border-box;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px !important;
+  max-width: 95vw;
+  padding: 8px !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-ellipse a,
+.nav-ellipse a:visited {
+  white-space: nowrap;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.nav-ellipse::-webkit-scrollbar { height: 8px; }
+.nav-ellipse::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 6px; }
+
+.chat-container,
+.portfolio-container,
+.about-container,
+.contact-container,
+.projects-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.about-section,
+.contact-section {
+  width: 100%;
+  display: block;
+  overflow: visible;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.about-section img,
+.contact-section img,
+.about-section svg,
+.contact-section svg,
+.contact-section .circle,
+.about-section .circle {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.contact-section .decor-circle,
+.about-section .decor-circle {
+  max-width: 35vmin;
+  max-height: 35vmin;
+  position: relative;
+  transform: translate(0,0);
+}
+
+.chat-page .chat-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 12px;
+}
+
+@media (max-width: 880px) {
+  .chat-page .chat-container > div {
+    flex-direction: column !important;
+  }
+  .chat-page .chat-container [style*="flex: '0 0 47%"], 
+  .chat-page .chat-container [style*="flex: '0 0 51%"] {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    border-left: none !important;
+    padding: 8px !important;
+  }
+  .nav-ellipse {
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+}
+
+@media (max-width: 420px), (max-height: 420px) {
+  .nav-ellipse a {
+    padding: 4px 6px !important;
+    font-size: 0.9rem !important;
+    border-width: 1px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .nav-ellipse {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+* {
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

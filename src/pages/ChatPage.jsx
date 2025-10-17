@@ -252,19 +252,21 @@ const ChatPage = () => {
         >
           Contact
         </Link>
-        <Link 
-          to="/chat" 
-          style={{ 
-            color: 'white', 
-            padding: '5px 8px',
-            borderRadius: '500px',
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            border: '2px solid white'
-          }}
-        >
-          Chat/talk with My Profile
-        </Link>
+{backendAvailable && (
+  <Link 
+    to="/chat" 
+    style={{ 
+      color: 'white', 
+      padding: '5px 8px',
+      borderRadius: '500px',
+      textDecoration: 'none',
+      whiteSpace: 'nowrap',
+      border: '2px solid white'
+    }}
+  >
+    Chat/talk with My Profile
+  </Link>
+)}
       </div>
 
       <div className="chat-page">

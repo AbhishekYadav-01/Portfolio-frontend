@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+// import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ChatPage from './pages/ChatPage';
+import axios from 'axios';
+axios.defaults.baseURL = 'https://portfolio-backend-v2-3kgf.onrender.com/api';
 
 function App() {
   return (

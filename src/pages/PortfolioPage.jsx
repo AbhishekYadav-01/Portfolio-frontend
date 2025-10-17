@@ -10,14 +10,35 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import Achievements from '../components/Achievements';
 
+
+const fallbackData = {
+  aboutMe: {
+    name: "Abhishek Yadav",
+    bio: "Full-stack developer with experience in React and Django. Portfolio content is available offline if backend is down.",
+    contact: {
+      email: "example@example.com",
+      phone: "+91-XXXXXXXXXX",
+      linkedin: ""
+    }
+  },
+  projects: [], 
+  skills: [
+    { id: 1, name: "JavaScript" },
+    { id: 2, name: "React" },
+    { id: 3, name: "Django" },
+    { id: 4, name: "Python" }
+  ],
+  experience: [
+    { id: 1, company: "Self Project", position: "Developer", start_date: "2023-01-01", end_date: "Present", description: "Worked on multiple personal projects." }
+  ],
+  education: [
+    { id: 1, institution: "IIT (Example)", degree: "B.Tech", field: "Computer Science", start_date: "2019-01-01", end_date: "2023-01-01" }
+  ]
+};
+
 const PortfolioPage = ({ section }) => {
-  const [data, setData] = useState({
-    aboutMe: null,
-    projects: [],
-    skills: [],
-    experience: [],
-    education: []
-  });
+  const [data, setData] = useState(fallbackData);
+  const [backendAvailable, setBackendAvailable] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,17 +60,17 @@ const PortfolioPage = ({ section }) => {
           experience: responses[3].data,
           education: responses[4].data
         });
+        setBackendAvailable(true);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setData(fallbackData);
+        setBackendAvailable(false);
       }
     };
   
     fetchData();
   }, []);
 
-  if (!data.aboutMe) return <div>Loading...</div>;
-
-  // Determine which section to display
   const renderSection = () => {
     switch (section) {
       case 'about-me':
@@ -95,8 +116,8 @@ const PortfolioPage = ({ section }) => {
           transform: 'translateX(-50%)',
           display: 'flex', 
           justifyContent: 'center', 
-          alignItems: 'center', // Ensure items are vertically centered
-          flexWrap: 'nowrap', // Prevent wrapping to keep buttons in a single row
+          alignItems: 'center',
+          flexWrap: 'nowrap',
           gap: '10px', 
           padding: '10px 10px', 
           background: 'rgba(255, 255, 255, 0.2)', // Transparent background
@@ -127,16 +148,16 @@ const PortfolioPage = ({ section }) => {
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
-            border: '1px solid white'
+            border: '2px solid white'
           }}
         >
-          About Me
+          About
         </Link>
         <Link 
           to="/projects" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -149,7 +170,7 @@ const PortfolioPage = ({ section }) => {
           to="/skills" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -162,7 +183,7 @@ const PortfolioPage = ({ section }) => {
           to="/experience" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -175,7 +196,7 @@ const PortfolioPage = ({ section }) => {
           to="/education" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -188,7 +209,7 @@ const PortfolioPage = ({ section }) => {
           to="/achievements" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -201,7 +222,7 @@ const PortfolioPage = ({ section }) => {
           to="/contact" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -214,7 +235,7 @@ const PortfolioPage = ({ section }) => {
           to="/chat" 
           style={{ 
             color: 'white', 
-            padding: '5px 8px', // updated padding
+            padding: '5px 8px',
             borderRadius: '500px',
             textDecoration: 'none',
             whiteSpace: 'nowrap',

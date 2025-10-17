@@ -11,9 +11,25 @@ const ChatPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
   const [isSpeaking, setIsSpeaking] = useState(false); // Track if answer is being spoken
+  const [backendAvailable, setBackendAvailable] = useState(true); // <-- new
   const { transcript, finalTranscript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
   const synthRef = useRef(window.speechSynthesis);
   const utteranceRef = useRef(null);
+
+  // Check backend availability on mount (minimal ping)
+  useEffect(() => {
+    const checkBackend = async () => {
+      try {
+        // short timeout to make detection quick
+        await axios.get('https://portfolio-backend-v2-3kgf.onrender.com/api/about-me/', { timeout: 3000 });
+        setBackendAvailable(true);
+      } catch (err) {
+        console.warn('Backend not available:', err && err.message ? err.message : err);
+        setBackendAvailable(false);
+      }
+    };
+    checkBackend();
+  }, []);
 
   // Handle voice answer
   const speakAnswer = (text) => {
@@ -38,6 +54,13 @@ const ChatPage = () => {
   const handleSubmit = async (questionToSubmit) => {
     if (!questionToSubmit.trim() || isLoading) return;
 
+    // If backend offline, show note and disable submission behavior
+    if (!backendAvailable) {
+      setAnswer('Chat feature not available right now (backend offline).');
+      setChatHistory((prev) => [...prev, { question: questionToSubmit, answer: 'Chat feature currently unavailable.' }]);
+      return;
+    }
+
     setIsLoading(true);
     try {
       const response = await axios.post('https://portfolio-backend-v2-3kgf.onrender.com/api/chat/', { 
@@ -60,6 +83,9 @@ const ChatPage = () => {
 
   // Voice input handler
   const handleVoiceInput = () => {
+    // If backend offline, do not start voice capture
+    if (!backendAvailable) return;
+
     if (listening) {
       SpeechRecognition.stopListening();
     } else {
@@ -73,10 +99,18 @@ const ChatPage = () => {
     if (!listening && finalTranscript.trim()) {
       // Update the input field for visual feedback
       setQuery(finalTranscript);
-      // Submit the finalized voice input directly
-      handleSubmit(finalTranscript);
+      // Submit the finalized voice input directly only if backend is available
+      if (backendAvailable) {
+        handleSubmit(finalTranscript);
+      } else {
+        // If backend is offline, add a history entry and show message
+        setAnswer('Chat feature not available right now (backend offline).');
+        setChatHistory((prev) => [...prev, { question: finalTranscript, answer: 'Chat feature currently unavailable.' }]);
+        resetTranscript();
+      }
     }
-  }, [listening, finalTranscript]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [listening, finalTranscript, backendAvailable]);
 
   // Cleanup speech synthesis on unmount
   useEffect(() => {
@@ -266,15 +300,24 @@ const ChatPage = () => {
                   <button
                     type="button"
                     onClick={handleVoiceInput}
-                    disabled={isLoading}
+                    disabled={isLoading || !backendAvailable}
                     className="voice-button"
                   >
                     {listening ? 'Stop Listening' : 'Start Voice Input'}
                   </button>
                 </div>
+
+                {/* ======= OFFLINE NOTE (minimal, inline style only) ======= */}
+                {!backendAvailable && (
+                  <div style={{ color: '#f8d7da', background: '#3b1f23', padding: '8px', borderRadius: '6px', marginBottom: '8px' }}>
+                    Chat feature not available right now (backend offline).
+                  </div>
+                )}
+                {/* ======================================================== */}
+
                 <button
                   type="submit"
-                  disabled={isLoading}
+                  disabled={isLoading || !backendAvailable}
                   className="submit-button"
                 >
                   {isLoading ? 'Processing...' : 'Ask'}

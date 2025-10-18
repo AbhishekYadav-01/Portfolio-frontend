@@ -48,6 +48,16 @@ const Projects = () => {
       }
     ],
     mlProjects: [
+
+      {
+        title: "Smart Lab Assistant: A Multi-Tenant, Conversational AI Scheduling Platform",
+        location: "Self Project",
+        date: "October 2025",
+        description: "Developed a multi-tenant, cloud-deployed platform where autonomous AI agents coordinate lab scheduling through real-time negotiation and decision-making. Built using Python (FastAPI), PostgreSQL, and WebSockets, the system features a Large Language Model-driven Head Agent that interprets natural-language queries, maintains conversational memory, and initiates multi-round negotiations with Lab Agents using proposals, counter-offers, and strategic heuristics. Implemented adaptive agent behavior through utility-based decision logic, reputation modeling, and a commitment-tracking framework, enabling transparent, trust-based collaboration and intelligent conflict resolution across organizations.",
+        technologies: ["FastAPI", "WebSockets", "Multi-Tenant SaaS", "Multi-Agent Systems (MAS)", "Conversational AI", "LLM (Large Language Model)", "NLP", "Agent Negotiation", "Strategic Heuristics", "Commitment Tracking", "Reputation Modeling", "Real-Time Communication", "Scalable Architecture", "AI-Driven Decision Making"],
+        github: "https://github.com/AbhishekYadav-01/Smart_Lab_Assistant",
+        live: "https://smart-lab-assistant.onrender.com/"
+      },      
       {
         title: "Deep Learning-based Language Translation",
         location: "Self Project",
@@ -162,7 +172,7 @@ const Projects = () => {
         </Row>
 
         {/* Machine Learning Projects */}
-        <h3 className="project-category-title mb-4">Machine Learning Projects :</h3>
+        <h3 className="project-category-title mb-4">AI/ML Projects :</h3>
         <Row className="g-4 mb-5">
           {projects.mlProjects.map((project, index) => (
             <Col key={index} lg={6} xl={4}>
@@ -179,6 +189,18 @@ const Projects = () => {
                         <div>{project.date}</div>
                       </div>
                     </div>
+                    {project.title === "Smart Lab Assistant: A Multi-Tenant, Conversational AI Scheduling Platform" && project.live && (
+                      <motion.a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="github-link live-link mb-3"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <span style={{ marginRight: 8 }}>🔗</span> View Live
+                      </motion.a>
+                    )}
+
                     <Card.Text className="project-description flex-grow-1">
                       {project.description}
                     </Card.Text>
@@ -221,6 +243,7 @@ const Projects = () => {
                         <div>{project.date}</div>
                       </div>
                     </div>
+                    
                     <Card.Text className="project-description flex-grow-1">
                       {project.description}
                     </Card.Text>

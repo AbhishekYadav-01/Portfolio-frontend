@@ -1905,3 +1905,15 @@ html {
     padding: 6px 10px;
   }
 }
+.skills-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}

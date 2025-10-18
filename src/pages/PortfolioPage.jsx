@@ -22,58 +22,60 @@ const fallbackData = {
     }
   },
   projects: [], // Projects component contains its own hardcoded projects as well
-  skills: [
-    // --- Core Programming Languages ---
-    { id: 1, name: "Python" },
-    { id: 2, name: "C++" },
-    { id: 3, name: "C" },
-    { id: 4, name: "JavaScript" },
-    { id: 5, name: "SQL" },
+skills: [
+  { id: 1, name: "Python" },
+  { id: 2, name: "C++" },
+  { id: 3, name: "C" },
+  { id: 4, name: "JavaScript" },
+  { id: 5, name: "SQL" },
+  { id: 6, name: "React.js" },
+  { id: 7, name: "Django" },
+  { id: 8, name: "HTML" },
+  { id: 9, name: "CSS" },
+  { id: 10, name: "Celery" },
+  { id: 11, name: "Docker" },
+  { id: 12, name: "Container" },
+  { id: 13, name: "AWS" },
+  { id: 14, name: "Redis" },
+  { id: 15, name: "WebSocket" },
+  { id: 16, name: "asyncio" },
+  { id: 17, name: "Pandas" },
+  { id: 18, name: "NumPy" },
+  { id: 19, name: "Matplotlib" },
+  { id: 20, name: "Seaborn" },
+  { id: 21, name: "Scikit-learn" },
+  { id: 22, name: "PyTorch" },
+  { id: 23, name: "LangChain" },
+  { id: 24, name: "NLP" },
+  { id: 25, name: "Deep Learning" },
+  { id: 26, name: "Machine Learning" },
+  { id: 27, name: "Computer Vision" },
+  { id: 28, name: "GAN" },
+  { id: 29, name: "LLM" },
+  { id: 30, name: "Multi-Agent Systems" },
+  { id: 31, name: "Agent Communication" },
+  { id: 32, name: "Distributed Decision-Making" },
+  { id: 33, name: "Agentic AI" },
+  { id: 34, name: "Pine Script" },
+  { id: 35, name: "Matlab" },
+  { id: 36, name: "Git" },
+  { id: 37, name: "GitHub" },
+  { id: 38, name: "Windows" },
+  { id: 39, name: "Ubuntu" },
+  { id: 40, name: "memcached" },
+  { id: 41, name: "Cron Jobs" },
+  { id: 42, name: "API" },
+  { id: 43, name: "Jupyter Notebook" },
+{ id: 90, name: "Data Structures" },
+{ id: 91, name: "Algorithms" },
+{ id: 92, name: "Operating Systems" },
+{ id: 93, name: "Database Systems" },
+{ id: 94, name: "Computer Architecture" },
+{ id: 95, name: "Computer Networks" },
+{ id: 96, name: "System Design" },
 
-    // --- Full Stack / Web Development ---
-    { id: 6, name: "React.js" },
-    { id: 7, name: "Django" },
-    { id: 8, name: "HTML" },
-    { id: 9, name: "CSS" },
-    { id: 10, name: "Celery" },
-    { id: 11, name: "Docker" },
-    { id: 12, name: "AWS" },
-    { id: 13, name: "Redis" },
-    { id: 14, name: "WebSocket" },
-    { id: 15, name: "asyncio" },
+],
 
-    // --- Data Science / Machine Learning ---
-    { id: 16, name: "Pandas" },
-    { id: 17, name: "NumPy" },
-    { id: 18, name: "Matplotlib" },
-    { id: 19, name: "Seaborn" },
-    { id: 20, name: "Scikit-learn" },
-    { id: 21, name: "PyTorch" },
-    { id: 22, name: "LangChain" },
-    { id: 23, name: "NLP" },
-    // { id: 24, name: "Deep Learning" },
-    // { id: 25, name: "Machine Learning" },
-    { id: 26, name: "GAN" },
-    // { id: 27, name: "LSTM Encoder–Decoder" },
-    // { id: 28, name: "Transformer Model" },
-    // { id: 29, name: "Attention Mechanism" },
-    // { id: 30, name: "Convolutional Seq2Seq" },
-
-    // --- Research & AI Systems ---
-    { id: 31, name: "LLM" },
-    // { id: 32, name: "MultiAgent Sys." },
-    // { id: 33, name: "Agent Comm." },
-    // { id: 34, name: "Distributed Decision-Making" },
-    { id: 35, name: "Agentic AI" },
-
-    // --- Specialized Domains / Tools ---
-    { id: 36, name: "Pine Script" },
-    { id: 37, name: "Matlab" },
-    { id: 38, name: "Git" },
-    { id: 39, name: "GitHub" },
-    { id: 40, name: "Windows" },
-    { id: 41, name: "Ubuntu" }
-  ],
 
   experience: [
     {
@@ -82,10 +84,11 @@ const fallbackData = {
       position: "SDE Intern",
       start_date: "Dec 2024",
       end_date: "Current",
-      description: `Architected and delivered 5+ end-to-end AI-powered full-stack web applications (Django, PL/SQL, React).
-      Deployed on AWS and automated local setup and testing via batch scripts all are in active production use.
-Developed real-time trading automation tools using WebSockets, broker APIs, Pine Script, and MQL.
-Served as group leader on multiple projects; consistently delivered features on schedule both independently and within cross-functional teams.`,
+description: ` Architected and delivered 5+ end-to-end AI-driven full-stack applications from system design to deployment, ensuring scalability, performance, and production reliability several of which are actively used in production.
+ Designed and implemented real-time trading automation platforms integrating live data streams, APIs, and strategy logic, significantly improving efficiency and response time.
+ Contributed to backend architecture, API integrations, and database optimization, enhancing robustness and overall system throughput.
+ Took initiative in automating local development, testing, and deployment workflows, reducing setup time and improving developer productivity.
+ Served as group leader on multiple projects and completed several independently; consistently delivered features on schedule both individually and within cross-functional teams.`,
       location: "Remote"
     },
 

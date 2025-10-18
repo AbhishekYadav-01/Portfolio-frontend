@@ -28,8 +28,10 @@ const Contact = () => {
       }}
     >
       <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Contact Me</h2>
-      <p style={{ fontSize: '1.2rem', marginBottom: '20px' }}>
-        Click on one of the icons below to reach out:
+      <p style={{ fontSize: '1rem', marginBottom: '20px' }}>
+I’m always open to connecting with people who share an interest in software engineering, AI, or building impactful digital products. 
+Whether you have an opportunity, a project idea, or just want to talk tech, feel free to reach out I’d be glad to connect. 
+You can contact me using the icons below.
       </p>
       <ul style={{ display: 'flex', justifyContent: 'center', gap: '1rem', listStyle: 'none', padding: 0 }}>
         {contacts.map((contact, index) => (
@@ -62,7 +64,6 @@ const Contact = () => {
         ))}
       </ul>
       <p style={{ fontSize: '1.2rem', marginTop: '20px' }}>
-        Looking forward to hearing from you!
       </p>
     </motion.section>
   );

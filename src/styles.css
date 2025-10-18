@@ -115,7 +115,7 @@ p {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif; /* Corrected font name */
-  background-image: url('assets/background6.webp');
+  background-image: url('assets/image_background7.jpg');
   background-size: cover;
   /* background-position: center; */
   background-attachment: fixed;
@@ -1567,14 +1567,14 @@ html {
 }
 
 .degree {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: white;
   margin-bottom: 0.5rem;
 }
 
 .institution {
-  font-size: 1rem;
+  font-size: 0.9rem;
   /* color: rgba(255, 255, 255, 0.8); */
   margin-bottom: 0.5rem;
 }
@@ -1586,7 +1586,7 @@ html {
 }
 
 .field-of-study {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.9);
 }
 

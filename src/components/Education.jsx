@@ -72,59 +72,71 @@ const Education = ({ data }) => {
                   <div className="courses-section">
                     <h3>Courses Taken :</h3>
                     <div className="course-category">
-                      <h3>Computer Science Courses</h3>
+                      <h4>Computer Science Courses</h4>
                       <ul>
+                        <h5>
                         {iitJodhpurCourses.computerScience.map((course, i) => (
                           <li key={i}>{course}</li>
                         ))}
+                        </h5>
                       </ul>
                     </div>
                     <div className="course-category">
-                      <h3>AI Courses</h3>
+                      <h4>AI Courses</h4>
                       <ul>
+                        <h5>
                         {iitJodhpurCourses.aiCourses.map((course, i) => (
                           <li key={i}>{course}</li>
                         ))}
+                        </h5>
                       </ul>
                     </div>
                     <div className="course-category">
-                      <h3>Mathematics Courses</h3>
+                      <h4>Mathematics Courses</h4>
                       <ul>
+                        <h5>
                         {iitJodhpurCourses.mathematics.map((course, i) => (
                           <li key={i}>{course}</li>
                         ))}
+                        </h5>
                       </ul>
                     </div>
                     <div className="course-category">
-                      <h3>Electrical Courses</h3>
+                      <h4>Electrical Courses</h4>
                       <ul>
+                        <h5>
                         {iitJodhpurCourses.electrical.map((course, i) => (
                           <li key={i}>{course}</li>
                         ))}
+                        </h5>
                       </ul>
                     </div>
                   </div>
                 )}
 
                 {/* Display Courses for Lohia Inter College */}
-                {edu.institution === "Lohia Inter College, Prayagraj" && edu.degree === "Class XII" && (
+                {edu.institution === "Lohia Inter College, Prayagraj" && edu.degree === "Class XI-XII" && (
                   <div className="courses-section">
-                    <h4>Courses Taken:</h4>
+                    <h3>Courses Taken:</h3>
                     <ul>
+                        <h5>
                       {["Physics", "Chemistry", "Mathematics", "Hindi", "English"].map((course, idx) => (
                         <li key={idx}>{course}</li>
                       ))}
+                        </h5>
                     </ul>
                   </div>
                 )}
 
-                {edu.institution === "Lohia Inter College, Prayagraj" && edu.degree === "Class X" && (
+                {edu.institution === "Lohia Inter College, Prayagraj" && edu.degree === "Class IX-X" && (
                   <div className="courses-section">
-                    <h4>Courses Taken:</h4>
+                    <h3>Courses Taken:</h3>
                     <ul>
+                        <h5>
                       {["Maths", "Science", "Hindi", "Social Science", "English", "Sanskrit"].map((course, idx) => (
                         <li key={idx}>{course}</li>
                       ))}
+                        </h5>
                     </ul>
                   </div>
                 )}

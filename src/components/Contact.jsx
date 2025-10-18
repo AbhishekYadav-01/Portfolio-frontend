@@ -38,7 +38,10 @@ const Contact = () => {
               href={contact.href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{
+                scale: 1.1, 
+                color: 'blue', 
+              }}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -48,7 +51,8 @@ const Contact = () => {
                 borderRadius: '9999px',
                 padding: '12px',
                 width: '50px',
-                height: '50px'
+                height: '50px',
+                color: 'white' 
               }}
               title={contact.tooltip}
             >

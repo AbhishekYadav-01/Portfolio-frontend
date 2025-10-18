@@ -211,7 +211,7 @@ const ChatPage = () => {
             border: '2px solid white'
           }}
         >
-          Experience
+          Experiences
         </Link>
         <Link 
           to="/education" 

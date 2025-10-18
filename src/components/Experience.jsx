@@ -13,7 +13,7 @@ const Experience = ({ data }) => {
       className="experience-section"
     >
       <Container>
-        <h2 className="section-title mb-5">Professional Journey</h2>
+        <h2 className="section-title mb-5">My Experiences</h2>
         <div className="timeline">
           {data.map((exp, index) => (
             <motion.div
@@ -28,9 +28,15 @@ const Experience = ({ data }) => {
               </div>
               <div className="timeline-content">
                 <h3 className="position">{exp.position}</h3>
-                <div className="company">{exp.company}</div>
+                <div className="company">Company : {exp.company}</div>
                 <div className="duration">{exp.start_date} - {exp.end_date || 'Present'}</div>
-                <p className="description">{exp.description}</p>
+                {/* <p className="description">{exp.description}</p> */}
+                <ul className="description">
+  {exp.description.split('\n').map((line, index) => (
+    <li key={index}>{line.trim()}</li>
+  ))}
+</ul>
+
               </div>
             </motion.div>
           ))}

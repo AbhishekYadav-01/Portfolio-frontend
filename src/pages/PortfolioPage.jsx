@@ -21,20 +21,106 @@ const fallbackData = {
       linkedin: ""
     }
   },
-  projects: [], 
+  projects: [], // Projects component contains its own hardcoded projects as well
   skills: [
-    { id: 1, name: "JavaScript" },
-    { id: 2, name: "React" },
-    { id: 3, name: "Django" },
-    { id: 4, name: "Python" }
+    { id: 1, name: "C" },
+    { id: 2, name: "C++" },
+    { id: 3, name: "Python" },
+    { id: 4, name: "JavaScript" },
+    { id: 5, name: "React.js" },
+    { id: 6, name: "Django" },
+    { id: 7, name: "Git" },
+    { id: 8, name: "SQL" },
+    { id: 9, name: "Pandas" },
+    { id: 10, name: "NumPy" },
+    { id: 11, name: "Scikit-learn" },
+    { id: 12, name: "PyTorch" },
+    { id: 13, name: "Matlab" },
+    { id: 14, name: "PineScript" },
+    { id: 15, name: "HTML" },
+    { id: 16, name: "CSS" },
+    { id: 17, name: "Reactjs" },
+    { id: 18, name: "GitHub" },
+    { id: 19, name: "Google Colab" },
+    { id: 20, name: "Windows" },
+    { id: 21, name: "Ubuntu" },
+    { id: 22, name: "Jupyter Notebook" },
+    { id: 23, name: "Celery" },
+    { id: 24, name: "AWS" },
+    { id: 25, name: "Matplotlib" },
+    { id: 26, name: "Seaborn" },
+    { id: 27, name: "Sklearn" }
   ],
   experience: [
-    { id: 1, company: "Self Project", position: "Developer", start_date: "2023-01-01", end_date: "Present", description: "Worked on multiple personal projects." }
+    {
+      id: 1,
+      company: "Softwired",
+      position: "SDE Intern",
+      start_date: "Dec 2024",
+      end_date: "Current",
+      description: `Architected and delivered 5+ end-to-end AI-powered full-stack web applications (Django, PL/SQL, React); deployed on AWS and automated local setup and testing via batch scripts — all are in active production use.
+Developed real-time trading automation tools using WebSockets, broker APIs, Pine Script, and MQL.
+Served as group leader on multiple projects; consistently delivered features on schedule both independently and within cross-functional teams.`,
+      location: "Remote"
+    },
+
+    {
+      id: 2,
+      company: "IIT Jodhpur (under Prof. Dip Sankar Banerjee)",
+      position: "High Performance Computing Research Intern",
+      start_date: "Aug 2024",
+      end_date: "Apr 2025",
+      description: `Gained knowledge in high-performance dynamic graph processing through research paper study and analysis.
+Designed and implemented scalable graph update algorithms and optimized memory-access patterns to improve throughput via parallelization and GPU acceleration.`
+    },
+    {
+      id: 3,
+      company: "Encryptix",
+      position: "Machine Learning Intern",
+      start_date: "May 2024",
+      end_date: "Jun 2024",
+      description: `Completed a 4-week virtual internship focused on developing skills in Machine Learning. 
+Gained hands-on experience with data preprocessing, feature engineering, and model development.
+Addressed real-world problems using machine learning techniques and delivered a final project demonstrating practical applications.`
+    },
+    {
+      id: 4,
+      company: "DojoStack AI (Germany)",
+      position: "AI Intern",
+      start_date: "Mar 2025",
+      end_date: "Sep 2025",
+      description: "Worked remotely as an AI Intern."
+    },
   ],
+
   education: [
-    { id: 1, institution: "IIT (Example)", degree: "B.Tech", field: "Computer Science", start_date: "2019-01-01", end_date: "2023-01-01" }
+    {
+      id: 1,
+      institution: "Indian Institute of Technology, Jodhpur",
+      degree: "B.Tech. (CSE + EE)",
+      field_of_study: "Major in Computer Science and Electrical Engineering",
+      start_date: "October 2022",
+      end_date: ""
+    },
+    {
+      id: 2,
+      institution: "Lohia Inter College, Prayagraj",
+      degree: "Class XI-XII",
+      field_of_study: "Science",
+      start_date: "July 2019",
+      end_date: "May 2021"
+    },
+    {
+      id: 3,
+      institution: "Lohia Inter College, Prayagraj",
+      degree: "Class IX-X",
+      field_of_study: "Science",
+      start_date: "July 2017",
+      end_date: "May 2019"
+    }
   ]
 };
+
 
 const PortfolioPage = ({ section }) => {
   const [data, setData] = useState(fallbackData);
@@ -195,7 +281,7 @@ const PortfolioPage = ({ section }) => {
             border: '2px solid white'
           }}
         >
-          Experience
+          Experiences
         </Link>
         <Link 
           to="/education" 

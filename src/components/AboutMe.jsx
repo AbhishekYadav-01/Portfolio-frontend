@@ -25,7 +25,9 @@ const AboutMe = () => {
 
   // Hardcoded data
   const data = {
-    bio: "I’m a B.Tech student with major in Computer Science at IIT Jodhpur, passionate about trading strategies, AI/ML, and software engineering. I love tackling complex problems, optimizing algorithms, and leveraging quantitative analysis to build data-driven solutions.",
+  bio: `Passionate Software Engineer and Full Stack Developer with expertise in building scalable, AI-powered web applications and intelligent automation systems. 
+Strong foundation in computer science, data structures, algorithms, and machine learning. 
+Focused on solving complex problems, optimizing performance, and delivering production-ready, high-impact solutions.`,
     experience: { years, months }, // Dynamic experience
     resume: "https://drive.google.com/file/d/1ZfvjH43wCGao9b0Zu5Vx8Q8xu6z084NO/view?usp=sharing", // Replace with your resume link
     github: "https://github.com/AbhishekYadav-01", // Replace with your GitHub link
@@ -67,7 +69,7 @@ const AboutMe = () => {
           transition={{ delay: 0.3 }}
           className="content-container glass-card"
         >
-          <h1 className="title">Hi, I’m Abhishek Yadav</h1>
+          <h1 className="title">Hi there, I’m Abhishek Yadav</h1>
           
           <div className="bio-section">
             <p className="bio-text">{data.bio}</p>

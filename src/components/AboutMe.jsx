@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { FiDownloadCloud, FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
 import profileImage from '../assets/profilePick.jpeg.jpg';
 const AboutMe = () => {
-  // Function to calculate experience
   const calculateExperience = (startDate) => {
     const start = new Date(startDate);
     const now = new Date();
@@ -19,21 +18,19 @@ const AboutMe = () => {
     return { years, months };
   };
 
-  // Start date
-  const startDate = "2024-10-20"; // Start date in YYYY-MM-DD format
+  const startDate = "2024-10-20"; 
   const { years, months } = calculateExperience(startDate);
 
-  // Hardcoded data
   const data = {
-  bio: `Passionate Software Engineer and Full Stack Developer with expertise in building scalable, AI-powered web applications and intelligent automation systems. 
-Strong foundation in computer science, data structures, algorithms, and machine learning. 
-Focused on solving complex problems, optimizing performance, and delivering production-ready, high-impact solutions.`,
-    experience: { years, months }, // Dynamic experience
-    resume: "https://drive.google.com/file/d/1ZfvjH43wCGao9b0Zu5Vx8Q8xu6z084NO/view?usp=sharing", // Replace with your resume link
-    github: "https://github.com/AbhishekYadav-01", // Replace with your GitHub link
-    linkedin: "https://www.linkedin.com/in/abhishek-yadav-9156a229b/", // Replace with your LinkedIn link
-    email: "abhishekiti95@gmail.com", // Replace with your email
-    phone: "+91 95556 73314" // Replace with your phone number
+bio: `Passionate Software Engineer and Full Stack Developer with expertise in building scalable, AI-driven web applications and intelligent automation systems. 
+Strong foundation in Computer Science, Artificial Intelligence, Machine Learning, Deep Learning, Data Structures, and Algorithms. 
+Focused on solving complex problems, optimizing system performance, and delivering high-impact, production-ready solutions.`,
+    experience: { years, months }, 
+    resume: "https://drive.google.com/file/d/1ZfvjH43wCGao9b0Zu5Vx8Q8xu6z084NO/view?usp=sharing", 
+    github: "https://github.com/AbhishekYadav-01", 
+    linkedin: "https://www.linkedin.com/in/abhishek-yadav-9156a229b/", 
+    email: "abhishekiti95@gmail.com", 
+    phone: "+91 95556 73314" 
   };
 
   return (
@@ -44,7 +41,7 @@ Focused on solving complex problems, optimizing performance, and delivering prod
       className="about-container"
     >
       <div className="profile-wrapper">
-        {/* Image Container */}
+
         <motion.div
           initial={{ x: -20 }}
           animate={{ x: 0 }}
@@ -58,11 +55,11 @@ Focused on solving complex problems, optimizing performance, and delivering prod
           <div className="image-glow"></div>
         </motion.div>
 
-        {/* Content Container with Glassmorphism Effect */}
+
         <motion.div
           drag
           dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-          // Removed hover scale to prevent blurring (was: whileHover={{ scale: 1.02 }})
+
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -87,7 +84,7 @@ Focused on solving complex problems, optimizing performance, and delivering prod
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 className="download-btn"
-                href={data.resume}  // Link to your resume file
+                href={data.resume} 
                 target="_blank"
                 rel="noopener noreferrer"
               >

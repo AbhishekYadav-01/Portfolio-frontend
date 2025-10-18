@@ -18,18 +18,20 @@ const Education = ({ data }) => {
       "Computer Networks",
       "Cryptography",
       "Virtualization and Cloud Computing",
-
     ],
     aiCourses: [
       "Pattern Recognition and Machine Learning",
       "Deep Learning",
-      "Computer Vision"
+      "Computer Vision",
+      "Autonomous Systems",
+      "Introduction to Data Science",
     ],
     mathematics: [
       "Design and analysis of Experiments",
       "Probability Statistics and Stochastic process",
       "Mathematics I",
-      "Mathematics II"
+      "Mathematics II",
+      "Theoretical Foundations of Econometrics"
     ],
     electrical: [
       "Communication Systems",
@@ -37,7 +39,9 @@ const Education = ({ data }) => {
       "Embedded Systems and IoT",
       "Signals and Systems",
       "Modelling and Simulation",
-      "Introduction to Electrical Engineering"
+      "Introduction to Electrical Engineering",
+      "IoT Systems",
+      "Biosensors"
     ]
   };
 
@@ -68,7 +72,7 @@ const Education = ({ data }) => {
                 <p className="field-of-study">{edu.field_of_study}</p>
 
                 {/* Display Courses for IIT Jodhpur */}
-                {edu.institution === "Indian Institute of Technology, Jodhpur" && (
+                {edu.institution === "Indian Institute of Technology, Jodhpur (IIT Jodhpur)" && (
                   <div className="courses-section">
                     <h3>Courses Taken :</h3>
                     <div className="course-category">

@@ -14,14 +14,14 @@ const Projects = () => {
         technologies: ["Reactjs", "Django", "Pine script", "API", "celery", "Trading Strategy", "Paper Trade", "AWS", "Websocket", "DBMS", "OS", "Async", "Redis", "asyncio"],
         github: "https://github.com/AbhishekYadav-01/Automated-Trading-System-with-Broker-Integration"
       },
-      {
-        title: "My Portfolio with AI Chatbot",
-        location: "Self Project",
-        date: "March-April 2025",
-        description: "Developed a full-stack interactive portfolio using React.js and Django to showcase my technical expertise and professional journey. The platform features a dynamic frontend with Framer Motion animations and a glassmorphism-inspired UI, coupled with a Django REST API backend for seamless data management. A standout feature is the AI-powered chatbot integrated with Groq API and FAISS, enabling visitors to query about me through natural language, enhanced with voice interaction capabilities using speech recognition and text-to-speech. Projects are systematically categorized into Software Engineering, Machine Learning, and Other domains, each detailing technologies used and key contributions. The entire system is deployed on Vercel (React) for the frontend and Railway (Django) for the backend, demonstrating end-to-end development and deployment proficiency.",
-        technologies: ["React.js", "Django", "Full-Stack Development", "Framer Motion", "Django REST API", "AI Chatbot", "Groq API", "FAISS", "Speech Recognition", "Text-to-Speech", "Natural Language Processing", "API Integration", "Dynamic Frontend", "Backend Hosting", "Interactive UI"]        ,
-        github: "https://github.com/AbhishekYadav-01/My-Portfolio"
-      },
+      // {
+      //   title: "My Portfolio with AI Chatbot",
+      //   location: "Self Project",
+      //   date: "March-April 2025",
+      //   description: "Developed a full-stack interactive portfolio using React.js and Django to showcase my technical expertise and professional journey. The platform features a dynamic frontend with Framer Motion animations and a glassmorphism-inspired UI, coupled with a Django REST API backend for seamless data management. A standout feature is the AI-powered chatbot integrated with Groq API and FAISS, enabling visitors to query about me through natural language, enhanced with voice interaction capabilities using speech recognition and text-to-speech. Projects are systematically categorized into Software Engineering, Machine Learning, and Other domains, each detailing technologies used and key contributions. The entire system is deployed on Vercel (React) for the frontend and Railway (Django) for the backend, demonstrating end-to-end development and deployment proficiency.",
+      //   technologies: ["React.js", "Django", "Full-Stack Development", "Framer Motion", "Django REST API", "AI Chatbot", "Groq API", "FAISS", "Speech Recognition", "Text-to-Speech", "Natural Language Processing", "API Integration", "Dynamic Frontend", "Backend Hosting", "Interactive UI"]        ,
+      //   github: "https://github.com/AbhishekYadav-01/My-Portfolio"
+      // },
       {
         title: "Infectious Virus Detection System",
         location: "Self Project",

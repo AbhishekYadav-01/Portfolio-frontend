@@ -1472,7 +1472,7 @@ html {
 }
 
 .description {
-  font-size: 0.9rem;
+  font: 1em sans-serif;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1586,7 +1586,7 @@ html {
 }
 
 .field-of-study {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1719,6 +1719,8 @@ html {
 }
 
 .achievement-description {
+    font: 1em sans-serif;
+
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.5rem;
 }
@@ -1862,5 +1864,44 @@ html {
     display: inline-block !important;
     font-size: 1.2rem !important;
     line-height: 1;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;        
+  max-width: 100%;             
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.skill-chip:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .skill-chip {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 }

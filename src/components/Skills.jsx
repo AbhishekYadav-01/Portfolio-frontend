@@ -13,11 +13,11 @@ const Skills = ({ data }) => {
     >
       <Container>
         <h3 className="section-title mb-5">Technical Skills</h3>
-        <div className="skills-grid">
+        <div className="skills-container">
           {data.map((skill, index) => (
             <motion.div
               key={index}
-              className="skill-item"
+              className="skill-chip"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >

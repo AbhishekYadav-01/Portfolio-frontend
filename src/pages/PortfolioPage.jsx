@@ -23,34 +23,58 @@ const fallbackData = {
   },
   projects: [], // Projects component contains its own hardcoded projects as well
   skills: [
-    { id: 1, name: "C" },
+    // --- Core Programming Languages ---
+    { id: 1, name: "Python" },
     { id: 2, name: "C++" },
-    { id: 3, name: "Python" },
+    { id: 3, name: "C" },
     { id: 4, name: "JavaScript" },
-    { id: 5, name: "React.js" },
-    { id: 6, name: "Django" },
-    { id: 7, name: "Git" },
-    { id: 8, name: "SQL" },
-    { id: 9, name: "Pandas" },
-    { id: 10, name: "NumPy" },
-    { id: 11, name: "Scikit-learn" },
-    { id: 12, name: "PyTorch" },
-    { id: 13, name: "Matlab" },
-    { id: 14, name: "PineScript" },
-    { id: 15, name: "HTML" },
-    { id: 16, name: "CSS" },
-    { id: 17, name: "Reactjs" },
-    { id: 18, name: "GitHub" },
-    { id: 19, name: "Google Colab" },
-    { id: 20, name: "Windows" },
-    { id: 21, name: "Ubuntu" },
-    { id: 22, name: "Jupyter Notebook" },
-    { id: 23, name: "Celery" },
-    { id: 24, name: "AWS" },
-    { id: 25, name: "Matplotlib" },
-    { id: 26, name: "Seaborn" },
-    { id: 27, name: "Sklearn" }
+    { id: 5, name: "SQL" },
+
+    // --- Full Stack / Web Development ---
+    { id: 6, name: "React.js" },
+    { id: 7, name: "Django" },
+    { id: 8, name: "HTML" },
+    { id: 9, name: "CSS" },
+    { id: 10, name: "Celery" },
+    { id: 11, name: "Docker" },
+    { id: 12, name: "AWS" },
+    { id: 13, name: "Redis" },
+    { id: 14, name: "WebSocket" },
+    { id: 15, name: "asyncio" },
+
+    // --- Data Science / Machine Learning ---
+    { id: 16, name: "Pandas" },
+    { id: 17, name: "NumPy" },
+    { id: 18, name: "Matplotlib" },
+    { id: 19, name: "Seaborn" },
+    { id: 20, name: "Scikit-learn" },
+    { id: 21, name: "PyTorch" },
+    { id: 22, name: "LangChain" },
+    { id: 23, name: "NLP" },
+    // { id: 24, name: "Deep Learning" },
+    // { id: 25, name: "Machine Learning" },
+    { id: 26, name: "GAN" },
+    // { id: 27, name: "LSTM Encoder–Decoder" },
+    // { id: 28, name: "Transformer Model" },
+    // { id: 29, name: "Attention Mechanism" },
+    // { id: 30, name: "Convolutional Seq2Seq" },
+
+    // --- Research & AI Systems ---
+    { id: 31, name: "LLM" },
+    // { id: 32, name: "MultiAgent Sys." },
+    // { id: 33, name: "Agent Comm." },
+    // { id: 34, name: "Distributed Decision-Making" },
+    { id: 35, name: "Agentic AI" },
+
+    // --- Specialized Domains / Tools ---
+    { id: 36, name: "Pine Script" },
+    { id: 37, name: "Matlab" },
+    { id: 38, name: "Git" },
+    { id: 39, name: "GitHub" },
+    { id: 40, name: "Windows" },
+    { id: 41, name: "Ubuntu" }
   ],
+
   experience: [
     {
       id: 1,
@@ -58,7 +82,8 @@ const fallbackData = {
       position: "SDE Intern",
       start_date: "Dec 2024",
       end_date: "Current",
-      description: `Architected and delivered 5+ end-to-end AI-powered full-stack web applications (Django, PL/SQL, React); deployed on AWS and automated local setup and testing via batch scripts — all are in active production use.
+      description: `Architected and delivered 5+ end-to-end AI-powered full-stack web applications (Django, PL/SQL, React).
+      Deployed on AWS and automated local setup and testing via batch scripts all are in active production use.
 Developed real-time trading automation tools using WebSockets, broker APIs, Pine Script, and MQL.
 Served as group leader on multiple projects; consistently delivered features on schedule both independently and within cross-functional teams.`,
       location: "Remote"
@@ -71,7 +96,8 @@ Served as group leader on multiple projects; consistently delivered features on 
       start_date: "Aug 2024",
       end_date: "Apr 2025",
       description: `Gained knowledge in high-performance dynamic graph processing through research paper study and analysis.
-Designed and implemented scalable graph update algorithms and optimized memory-access patterns to improve throughput via parallelization and GPU acceleration.`
+ Designed and implemented scalable graph update algorithms for real-time graph analytics. 
+ Optimized memory access patterns and improved throughput using parallel and GPU-accelerated strategies.`,
     },
     {
       id: 3,
@@ -96,7 +122,7 @@ Addressed real-world problems using machine learning techniques and delivered a 
   education: [
     {
       id: 1,
-      institution: "Indian Institute of Technology, Jodhpur",
+      institution: "Indian Institute of Technology, Jodhpur (IIT Jodhpur)",
       degree: "B.Tech. (CSE + EE)",
       field_of_study: "Major in Computer Science and Electrical Engineering",
       start_date: "October 2022",

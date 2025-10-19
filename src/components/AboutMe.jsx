@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiDownloadCloud, FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
-import profileImage from '../assets/profilePick.jpeg.jpg';
+import profileImage from '../assets/profile_photo_new.jpg';
 const AboutMe = () => {
   const calculateExperience = (startDate) => {
     const start = new Date(startDate);

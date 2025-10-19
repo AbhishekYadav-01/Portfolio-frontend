@@ -90,14 +90,14 @@ const Projects = () => {
         technologies: ["Machine Learning", "TF-IDF Vectorization", "Logistic Regression", "Naive Bayes", "Random Forest", "Support Vector Machine (SVM)", "Hyperparameter Tuning", "Cross-Validation", "Model Evaluation", "Precision", "Recall", "F1-Score", "Multi-Class Classification"],
         github: "https://github.com/AbhishekYadav-01/Encryptix/tree/main/MOVIE%20GENRE%20%20CLASSIFICATION"
       },
-      {
-        title: "Virtual Object Placement (AR-like)",
-        location: "Self Project",
-        date: "April 2025",
-        description: "Ongoing project for computer vision-based virtual object interaction in real images.",
-        technologies: ["Computer Vision", "Deep Learning"],
-        github: "https://github.com/AbhishekYadav-01/Virtual-Object-Placement-AR-like-"
-      }
+      // {
+      //   title: "Virtual Object Placement (AR-like)",
+      //   location: "Self Project",
+      //   date: "April 2025",
+      //   description: "Ongoing project for computer vision-based virtual object interaction in real images.",
+      //   technologies: ["Computer Vision", "Deep Learning"],
+      //   github: "https://github.com/AbhishekYadav-01/Virtual-Object-Placement-AR-like-"
+      // }
     ],
     otherProjects: [
       {

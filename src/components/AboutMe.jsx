@@ -26,7 +26,7 @@ bio: `Passionate Software Engineer and Full Stack Developer with expertise in bu
 Strong foundation in Computer Science, Artificial Intelligence, Machine Learning, Deep Learning, Data Structures, and Algorithms. 
 Focused on solving complex problems, optimizing system performance, and delivering high-impact, production-ready solutions.`,
     experience: { years, months }, 
-    resume: "https://drive.google.com/file/d/1ZfvjH43wCGao9b0Zu5Vx8Q8xu6z084NO/view?usp=sharing", 
+    resume: "https://drive.google.com/file/d/1pezogLWZGu-18lbZfOC5aKRGahwg6YwA/view?usp=sharing", 
     github: "https://github.com/AbhishekYadav-01", 
     linkedin: "https://www.linkedin.com/in/abhishek-yadav-9156a229b/", 
     email: "abhishekiti95@gmail.com", 

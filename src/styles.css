@@ -2167,3 +2167,47 @@ html {
     font-size: 0.95rem !important;
   }
 }
+
+@media (max-width: 600px) {
+
+  .project-description,
+  .project-card p,
+  .project-card .card-text,
+  .project-card .card-body p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+
+
+  .contact p,
+  .contact-section p,
+  .contact .section-description {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+  }
+
+
+  .contact h2,
+  .projects h2,
+  .project-category-title {
+    font-size: 1.3rem !important;
+  }
+
+
+  .contact,
+  .projects-section,
+  .project-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .project-description,
+  .contact p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+}

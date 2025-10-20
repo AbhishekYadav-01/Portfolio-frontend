@@ -80,17 +80,17 @@ Focused on solving complex problems, optimizing system performance, and deliveri
               </div>
             </div>
 
-            <div className="action-buttons">
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                className="download-btn"
-                href={data.resume} 
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiDownloadCloud />
-                Download CV
-              </motion.a>
+          <div className="action-buttons">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              className="download-btn"
+              href={data.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiDownloadCloud className="cv-icon" />
+              <span className="cv-text"> CV</span>
+            </motion.a>
               
               <div className="social-links">
                 <a href={data.github} target="_blank" rel="noreferrer">

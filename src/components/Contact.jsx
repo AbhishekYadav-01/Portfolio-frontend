@@ -33,36 +33,25 @@ I’m always open to connecting with people who share an interest in software en
 Whether you have an opportunity, a project idea, or just want to talk tech, feel free to reach out I’d be glad to connect. 
 You can contact me using the icons below.
       </p>
-      <ul style={{ display: 'flex', justifyContent: 'center', gap: '1rem', listStyle: 'none', padding: 0 }}>
-        {contacts.map((contact, index) => (
-          <li key={index}>
-            <motion.a
-              href={contact.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.1, 
-                color: 'blue', 
-              }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'rgba(255, 255, 255, 0.2)',
-                border: '2px solid white',
-                borderRadius: '9999px',
-                padding: '12px',
-                width: '50px',
-                height: '50px',
-                color: 'white' 
-              }}
-              title={contact.tooltip}
-            >
-              {contact.icon}
-            </motion.a>
-          </li>
-        ))}
-      </ul>
+        <ul className="contact-list">
+          {contacts.map((contact, index) => (
+            <li key={index}>
+              <motion.a
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.1,
+                  color: 'blue',
+                }}
+                className="contact-link"
+                title={contact.tooltip}
+              >
+                {contact.icon}
+              </motion.a>
+            </li>
+          ))}
+        </ul>
       <p style={{ fontSize: '1.2rem', marginTop: '20px' }}>
       </p>
     </motion.section>

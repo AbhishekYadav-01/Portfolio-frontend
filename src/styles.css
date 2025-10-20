@@ -2075,3 +2075,95 @@ html {
     width: 90%;
   }
 }
+
+
+.timeline, .experience-timeline, .education-timeline {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.timeline .timeline-item .card,
+.experience-timeline .timeline-item .card,
+.education-timeline .timeline-item .card,
+.timeline-item .card,
+.experience-item .card,
+.education-item .card {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.timeline::before,
+.experience-timeline::before,
+.education-timeline::before,
+.timeline .center-line,
+.experience .center-line,
+.education .center-line {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline::before,
+  .experience-timeline::before,
+  .education-timeline::before,
+  .timeline .center-line,
+  .experience .center-line,
+  .education .center-line {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  .timeline .timeline-item,
+  .experience-timeline .timeline-item,
+  .education-timeline .timeline-item,
+  .timeline-item,
+  .experience-item,
+  .education-item {
+    width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    transform: none !important;
+  }
+
+  .timeline .timeline-item .card,
+  .experience-timeline .timeline-item .card,
+  .education-timeline .timeline-item .card,
+  .timeline-item .card,
+  .experience-item .card,
+  .education-item .card {
+    width: calc(100% - 0px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 14px !important;
+    box-sizing: border-box;
+  }
+
+  .timeline .timeline-item .timeline-bullet,
+  .timeline-bullet,
+  .experience-item .timeline-bullet,
+  .education-item .timeline-bullet,
+  .timeline-icon,
+  .item-icon {
+    left: 12px !important;
+    top: 12px !important;
+    transform: translateX(0) !important;
+  }
+
+  .timeline, .experience-timeline, .education-timeline,
+  .timeline-section, .experience-section, .education-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .timeline .timeline-item .card,
+  .experience-timeline .timeline-item .card,
+  .education-timeline .timeline-item .card {
+    padding: 12px !important;
+    font-size: 0.95rem !important;
+  }
+}

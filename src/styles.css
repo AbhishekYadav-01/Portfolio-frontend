@@ -1955,3 +1955,47 @@ html {
     font-size: 1.5rem; 
   }
 }
+
+.nav-ellipse {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.nav-ellipse::-webkit-scrollbar {
+  display: none; 
+}
+
+.nav-ellipse a {
+  font-size: 0.95rem;
+  padding: 5px 8px;
+  white-space: nowrap;
+  border-radius: 500px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-ellipse a {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    border-width: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-ellipse {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .nav-ellipse a {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+    border-width: 1px;
+  }
+}

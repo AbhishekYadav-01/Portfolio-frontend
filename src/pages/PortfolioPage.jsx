@@ -229,17 +229,10 @@ const PortfolioPage = ({ section }) => {
           top: '10px',
           left: '50%',
           transform: 'translateX(-50%)',
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center',
-          flexWrap: 'nowrap',
-          gap: '10px', 
-          padding: '10px 10px', 
-          background: 'rgba(255, 255, 255, 0.2)', // Transparent background
-          backdropFilter: 'blur(250px)', // Add blur effect
-          borderRadius: '500px',  // High borderRadius creates an ellipse
-          zIndex: 1000,
-          overflowX: 'auto' // Allow horizontal scrolling if content overflows
+          background: 'rgba(255, 255, 255, 0.2)',
+          backdropFilter: 'blur(250px)',
+          borderRadius: '500px',
+          zIndex: 1000
         }}
       >
         <Link 

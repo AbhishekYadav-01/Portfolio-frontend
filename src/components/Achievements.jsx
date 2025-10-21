@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const achievements = [
   {
     title: "SPEIC’24 Fastcode Challenge",
-    description: "As part of the SPEIC'24 BFS Optimization Challenge, I developed an optimized parallel Breadth-First Search (BFS) algorithm using the Compressed Sparse Row (CSR) format to improve memory efficiency and scalability. By leveraging multi-threaded parallelization, efficient workload distribution, and memory-aware traversal techniques, the implementation achieved a 20.5× weighted speedup over the baseline. The solution was ranked in the Top 10 across multiple large-scale graph datasets, with a best performance of 9th place on the largest dataset, containing 87.0 million vertices and 112.9 million edges, demonstrating strong capabilities in high-performance computing and large-scale graph processing.",
+    description: "As part of the international SPEIC'24 BFS Optimization Challenge, I developed an optimized parallel Breadth-First Search (BFS) algorithm using the Compressed Sparse Row (CSR) format to improve memory efficiency and scalability. Leveraging multi-threaded parallelization, balanced workload distribution, and memory-aware traversal techniques, the implementation achieved a 20.5× weighted speedup over the baseline. The solution earned international Top 10 rankings across multiple large-scale graph datasets, including a best performance of 9th place on the largest dataset containing 87.0 million vertices and 112.9 million edges, demonstrating strong proficiency in high-performance computing and large-scale graph processing.",
     year: "2025",
     // icon: "🏆",
     Link: "https://github.com/AbhishekYadav-01/FastCode-Programming-Challenge" // Added GitHub link

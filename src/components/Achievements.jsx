@@ -41,6 +41,16 @@ const achievements = [
 ];
 
 const Achievements = () => {
+  const highlightPhrase = "The solution earned international Top 10 rankings";
+  const highlightStyle = {
+    background: "rgba(34, 197, 94, 0.16)",
+    padding: "2px 6px",
+    borderRadius: "6px",
+    fontWeight: 700,
+    margin: "0 4px",
+    color: "white",
+  };
+
   return (
     <motion.section 
       initial={{ opacity: 0 }}
@@ -68,7 +78,22 @@ const Achievements = () => {
                         {achievement.year}
                       </span>
                     </div>
-                    <p className="achievement-description">{achievement.description}</p>
+                    <p className="achievement-description" style={{ marginTop: '0.5rem' }}>
+                      {(() => {
+                        const text = achievement.description || "";
+                        if (text.includes(highlightPhrase)) {
+                          const parts = text.split(highlightPhrase);
+                          return (
+                            <>
+                              {parts[0]}
+                              <span style={highlightStyle}>{highlightPhrase}</span>
+                              {parts[1]}
+                            </>
+                          );
+                        }
+                        return text;
+                      })()}
+                    </p>
                     {achievement.Link && (
                       <motion.a 
                         href={achievement.Link} 
@@ -81,7 +106,8 @@ const Achievements = () => {
                           borderRadius: '9999px',
                           background: 'rgba(255,255,255,0.2)',
                           color: 'white',
-                          marginTop: '0.5rem'
+                          marginTop: '0.5rem',
+                          marginLeft: achievement.Link ? '8px' : '0'
                         }}
                         whileHover={{ color: '#ADD8E6' }}
                       >

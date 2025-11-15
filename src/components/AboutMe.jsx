@@ -75,7 +75,20 @@ Focused on solving complex problems, optimizing system performance, and deliveri
               <div className="highlight-card">
                 <span className="highlight-text">Professional Experience</span>
                 <span className="highlight-number">
-                  {data.experience.years} years {data.experience.months} months
+                    <>
+                      {data.experience.years > 0 && (
+                        <>
+                          {data.experience.years} {data.experience.years === 1 ? "Year" : "Years"}
+                        </>
+                      )}
+
+                      {data.experience.months > 0 && (
+                        <>
+                          {" "}
+                          {data.experience.months} {data.experience.months === 1 ? "Month" : "Months"}
+                        </>
+                      )}
+                    </>
                 </span>
               </div>
             </div>
